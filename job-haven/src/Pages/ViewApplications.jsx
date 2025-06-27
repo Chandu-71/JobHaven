@@ -3,7 +3,8 @@ import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import Loading from '../Components/Loading';
-import { IconDownload } from '@tabler/icons-react';
+import { IconDownload, IconDots, IconCheck, IconX } from '@tabler/icons-react';
+import { Menu, ActionIcon } from '@mantine/core';
 
 function ViewApplications() {
   const { backendUrl, companyToken } = useContext(AppContext);
@@ -95,23 +96,30 @@ function ViewApplications() {
                   </td>
                   <td>
                     {applicant.status === 'Pending' ? (
-                      <div className='relative inline-block text-left group'>
-                        <button className='text-gray-500 action-button px-4'>...</button>
-                        <div className='z-10 hidden absolute right-0 md:left-4 top-0 mt-2 w-32 bg-white border border-gray-200 rounded shadow group-hover:block transition-all duration-300 ease-in-out delay-100'>
-                          <button
+                      <Menu shadow='md' width={150} position='bottom-end'>
+                        <Menu.Target>
+                          <ActionIcon variant='subtle' color='gray'>
+                            <IconDots size={16} />
+                          </ActionIcon>
+                        </Menu.Target>
+
+                        <Menu.Dropdown>
+                          <Menu.Item
+                            leftSection={<IconCheck size={14} />}
+                            color='blue'
                             onClick={() => changeJobApplicationStatus(applicant._id, 'Accepted')}
-                            className='block w-full text-left px-4 py-2 text-blue-500 hover:bg-blue-100'
                           >
                             Accept
-                          </button>
-                          <button
+                          </Menu.Item>
+                          <Menu.Item
+                            leftSection={<IconX size={14} />}
+                            color='red'
                             onClick={() => changeJobApplicationStatus(applicant._id, 'Rejected')}
-                            className='block w-full text-left px-4 py-2 text-red-500 hover:bg-red-50'
                           >
                             Reject
-                          </button>
-                        </div>
-                      </div>
+                          </Menu.Item>
+                        </Menu.Dropdown>
+                      </Menu>
                     ) : (
                       <div>{applicant.status}</div>
                     )}
