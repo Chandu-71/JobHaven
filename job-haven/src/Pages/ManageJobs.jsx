@@ -63,7 +63,7 @@ function ManageJobs() {
                   Date
                 </th>
                 <th className='py-3 px-2 sm:py-4 sm:px-4 lg:px-6 font-semibold text-gray-900 text-left text-xs sm:text-sm'>Location</th>
-                <th className='py-3 px-2 sm:py-4 sm:px-4 lg:px-6 font-semibold text-gray-900 text-center text-xs sm:text-sm'>Apps</th>
+                <th className='py-3 px-2 sm:py-4 sm:px-4 lg:px-6 font-semibold text-gray-900 text-center text-xs sm:text-sm'>Applicants</th>
                 <th className='py-3 px-2 sm:py-4 sm:px-4 lg:px-6 font-semibold text-gray-900 text-center text-xs sm:text-sm'>Visible</th>
               </tr>
             </thead>
