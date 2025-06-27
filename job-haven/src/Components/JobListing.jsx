@@ -163,8 +163,8 @@ function JobListing() {
         {filteredJobs.length > 0 ? (
           <>
             <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'>
-              {filteredJobs.slice((currentPage - 1) * 6, currentPage * 6).map(job => (
-                <JobCard key={job.id} job={job} />
+              {filteredJobs.slice((currentPage - 1) * 6, currentPage * 6).map((job, index) => (
+                <JobCard key={index} job={job} />
               ))}
             </div>
 

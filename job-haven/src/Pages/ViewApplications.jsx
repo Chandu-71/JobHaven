@@ -54,7 +54,7 @@ function ViewApplications() {
       </div>
     ) : (
       <div className='container mx-auto p-6 max-sm:p-4'>
-        <div>
+        <div className='overflow-x-auto'>
           <table className='w-full max-w-4xl bg-white border-0 shadow-sm border-gray-200 max-sm:text-sm'>
             <thead>
               <tr className='bg-gray-100 border-b border-gray-300 [&_th]:py-3 [&_th]:px-6 [&_th]:text-left [&_th]:font-semibold [&_th]:text-gray-900 [&_th]:max-sm:text-xs'>

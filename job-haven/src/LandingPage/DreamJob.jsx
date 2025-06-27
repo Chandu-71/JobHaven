@@ -30,7 +30,7 @@ function DreamJob() {
         </div>
       </div>
 
-      <div className='w-200 max-lg:w-100 mt-5 relative flex justify-center'>
+      <div className='w-200 max-lg:max-w-dvw mt-5 relative flex justify-center'>
         <img src={assets.working_man_9} alt='man with a laptop' />
 
         <div className='absolute top-[50%] right-10 max-sm:right-2 w-fit border-2 border-sky-700 rounded-lg p-3 backdrop-blur-md'>

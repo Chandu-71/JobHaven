@@ -46,7 +46,7 @@ function Header() {
             <HoverCard.Target>
               <img className='w-8 bg-white object-cover border border-gray-400 rounded-full cursor-pointer' src={companyData?.image} alt='' />
             </HoverCard.Target>
-            <HoverCard.Dropdown className='!mt-1.5 !py-2.5 !pr-10 !rounded-md !border !border-gray-300'>
+            <HoverCard.Dropdown className='!mt-1.5 !py-2.5 !pr-10 !rounded-md !border !border-gray-300 max-md:hidden'>
               <p
                 className='text-sm hover:text-red-800 cursor-pointer transition'
                 onClick={() => {
@@ -60,7 +60,7 @@ function Header() {
               </p>
             </HoverCard.Dropdown>
           </HoverCard>
-          {/* <div className='sm:hidden border py-1.5 px-2 border-red-400 rounded ml-2'>
+          <div className='md:hidden border py-1.5 px-2 border-red-400 rounded ml-2'>
             <button
               onClick={() => {
                 localStorage.removeItem('companyToken');
@@ -72,7 +72,7 @@ function Header() {
             >
               Logout
             </button>
-          </div> */}
+          </div>
         </div>
       ) : (
         <div className='flex gap-4 max-sm:gap-2 max-sm:text-xs'>

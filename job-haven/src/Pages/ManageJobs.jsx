@@ -52,9 +52,9 @@ function ManageJobs() {
         <p className='text-xl sm:text-2xl'>No Jobs Available or posted</p>
       </div>
     ) : (
-      <div className='container p-6 max-sm:p-4 max-w-5xl'>
-        <div className='overflow-x-auto w-full shadow'>
-          <table className='w-full bg-white shadow-sm border border-gray-100 text-sm'>
+      <div className='container p-6 max-sm:p-4 sm:max-w-5xl'>
+        <div className='overflow-x-auto shadow'>
+          <table className='min-w-full bg-white shadow-sm border border-gray-100 text-sm'>
             <thead>
               <tr className='bg-gray-50 border-b border-gray-200'>
                 <th className='py-3 px-2 sm:py-4 sm:px-4 lg:px-6 font-semibold text-gray-900 text-left text-xs sm:text-sm hidden sm:table-cell'>#</th>

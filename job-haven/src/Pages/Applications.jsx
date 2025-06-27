@@ -83,7 +83,7 @@ function Applications() {
         )}
       </div>
       <h2 className='text-xl text-gray-200 font-semibold pb-4'>Jobs Applied</h2>
-      <div className='bg-gradient-to-t from-gray-900 via-gray-900 to-gray-950 rounded-xl border border-gray-200'>
+      <div className='bg-gradient-to-t from-gray-900 via-gray-900 to-gray-950 rounded-xl border border-gray-200 overflow-x-auto'>
         <table className='min-w-full'>
           <thead>
             <tr className='[&_th]:px-6 [&_th]:py-4 [&_th]:font-semibold tracking-wider text-gray-200 border-b border-gray-200 text-left '>
