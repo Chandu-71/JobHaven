@@ -76,15 +76,15 @@ function JobListing() {
                 <IconCirclesFilled height={28} className='text-blue-400' />
                 <h3 className='font-medium text-gray-300 text-lg'>Keyword Search</h3>
               </div>
-              <div className='mb-4 text-gray-200'>
+              <div className='mb-4 text-gray-200 overflow-x-auto'>
                 {searchFilter.title && (
-                  <span className='inline-flex items-center gap-2.5 bg-blue-900/60 text-blue-100 px-2 py-1 rounded-full'>
+                  <span className='inline-flex mt-2 mr-2 items-center gap-2.5 bg-blue-900/60 text-blue-100 px-2 py-1 rounded-full'>
                     {searchFilter.title}
                     <IconX onClick={e => setSearchFilter(s => ({ ...s, title: '' }))} size={16} stroke={2.7} className='cursor-pointer mt-0.5' />
                   </span>
                 )}
                 {searchFilter.location && (
-                  <span className='ml-2 mt-2 inline-flex items-center gap-2.5 bg-teal-900/60 text-teal-100 px-2 py-1 rounded-full'>
+                  <span className='mt-2 inline-flex items-center gap-2.5 bg-teal-900/60 text-teal-100 px-2 py-1 rounded-full'>
                     {searchFilter.location}
                     <IconX onClick={e => setSearchFilter(s => ({ ...s, location: '' }))} size={16} stroke={2.7} className='cursor-pointer mt-0.5' />
                   </span>
