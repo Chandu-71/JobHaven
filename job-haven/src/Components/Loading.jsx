@@ -9,11 +9,11 @@ function Loading() {
           <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-950 to-indigo-500 rounded-xl flex items-center justify-center mb-4 shadow-lg">
             <img className="w-13" src={assets.Mylogo} alt="logo" />
           </div>
-          <h2 className="text-xl font-semibold text-gray-800">JobFinder</h2>
+          <h2 className="text-xl font-semibold text-gray-200">JobHaven</h2>
         </div>
 
         <div className="ml-3 mb-4">
-          <p className="text-gray-600 font-medium">Loading...</p>
+          <p className="text-gray-300 font-medium">Loading...</p>
         </div>
 
         {/* Animated Dots */}

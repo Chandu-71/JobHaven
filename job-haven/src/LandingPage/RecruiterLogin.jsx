@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import {IconBuildingSkyscraper, IconMail, IconLockPassword, IconX } from '@tabler/icons-react';
+import { IconBuildingSkyscraper, IconMail, IconLockPassword, IconX } from '@tabler/icons-react';
 
 function RecruiterLogin() {
   const { setShowRecruiterLogin, backendUrl, setCompanyToken, setCompanyData } = useContext(AppContext);
@@ -72,6 +72,16 @@ function RecruiterLogin() {
     };
   }, []);
 
+  useEffect(() => {
+    if (state === 'Login') {
+      setEmail('google@demo.com');
+      setPassword('1234567');
+    } else {
+      setEmail('');
+      setPassword('');
+    }
+  }, [state]);
+
   return (
     <div className='absolute top-0 bottom-0 right-0 left-0 z-1 backdrop-blur-sm bg-black/30 flex flex-col justify-center items-center'>
       <form onSubmit={onSubmitHandler} className='relative bg-white/80 pt-10 pb-3 px-2 rounded-xl text-slate-500'>
@@ -95,7 +105,7 @@ function RecruiterLogin() {
             <div className='flex flex-col gap-2'>
               {state !== 'Login' && (
                 <div className='border border-gray-300 bg-white px-4 py-2 flex items-center gap-2 rounded-2xl'>
-                  <IconBuildingSkyscraper width={20} stroke={1.5}/>
+                  <IconBuildingSkyscraper width={20} stroke={1.5} />
                   <input
                     className='outline-none text-sm text-gray-800'
                     onChange={e => setName(e.target.value)}
@@ -107,7 +117,7 @@ function RecruiterLogin() {
                 </div>
               )}
               <div className='border border-gray-300 bg-white px-4 py-2 flex items-center gap-2 rounded-2xl'>
-                <IconMail width={20} stroke={1.5}/>
+                <IconMail width={20} stroke={1.5} />
                 <input
                   className='outline-none text-sm text-gray-800'
                   onChange={e => setEmail(e.target.value)}
@@ -118,7 +128,7 @@ function RecruiterLogin() {
                 />
               </div>
               <div className='border border-gray-300 bg-white px-4 py-2 flex items-center gap-2 rounded-2xl'>
-                <IconLockPassword width={20} stroke={1.5}/>
+                <IconLockPassword width={20} stroke={1.5} />
                 <input
                   className='outline-none text-sm text-gray-800'
                   onChange={e => setPassword(e.target.value)}
