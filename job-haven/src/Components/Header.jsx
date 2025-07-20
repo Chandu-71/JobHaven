@@ -28,7 +28,7 @@ function Header() {
             to='/applications'
             className='text-[17px] max-sm:text-xs font-semibold text-transparent bg-clip-text bg-gray-200 hover:bg-gradient-to-r hover:from-cyan-300 hover:to-blue-500 transition-colors duration-200'
           >
-            View Applied Jobs
+            My Applications
           </Link>
 
           <div className='h-5 w-px bg-gray-600' />

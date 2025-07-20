@@ -14,10 +14,6 @@ function Hero() {
       location: locationRef.current.value.trim(),
     });
     setIsSearched(true);
-    console.log('Search initiated with:', {
-      title: titleRef.current.value.trim(),
-      location: locationRef.current.value.trim(),
-    });
   };
 
   return (

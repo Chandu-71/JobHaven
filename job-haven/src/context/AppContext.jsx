@@ -36,7 +36,6 @@ function AppContextProvider(props) {
 
       if (data.success) {
         setJobs(data.jobs);
-        console.log(data.jobs);
       } else {
         toast.error(data.message);
       }
@@ -52,7 +51,6 @@ function AppContextProvider(props) {
 
       if (data.success) {
         setCompanyData(data.company);
-        console.log(data.company);
       } else {
         toast.error(data.message);
       }
